@@ -3,7 +3,7 @@ import React from 'react'
 const layout = ({ children }: any) => {
   return (
     <div>
-        layout이 먼저 될걸ㄹ?
+      site layout 
         {children}
     </div>
   )
