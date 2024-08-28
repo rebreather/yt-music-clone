@@ -6,6 +6,8 @@ import { FiPlus, FiMusic, FiCompass } from 'react-icons/fi'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'; 
 import { cn } from '@/lib/utils'
+import { dummyPlaylistArray } from '@/lib/dummyData'
+import PlaylistNav from './PlaylistNav'
 
 const Navigator = () => {
 
@@ -45,6 +47,14 @@ const Navigator = () => {
         <span>새 재생목록</span>
       </div>
     </section>
+    <section>
+      <ul className='flex flex-col'>
+        {dummyPlaylistArray.map((playlist) => {
+          return <PlaylistNav key={playlist.id} playlist={playlist} />
+        })}
+      </ul>
+    </section>
+
     </div>
   )
 }
